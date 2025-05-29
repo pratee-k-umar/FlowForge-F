@@ -9,13 +9,26 @@ import {
   FaFacebookF,
   FaApple,
 } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Basic login check
+    if (formData.email === "admin@gmail.com" && formData.password === "1234") {
+      router.push("http://localhost:3000/dashboard/user");
+    } else {
+      alert("Invalid credentials. Try again.");
+    }
   };
 
   return (
@@ -25,9 +38,9 @@ const Login = () => {
         <div className="w-full md:w-1/2 flex items-center justify-center p-10">
           <div className="max-w-md w-full">
             <h2 className="text-xl text-gray-500">Start your journey</h2>
-            <h1 className="text-3xl font-bold mb-8">Sign In</h1>
+            <h1 className="text-3xl font-bold mb-8">Log In</h1>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Email */}
               <div>
                 <label className="text-sm font-medium text-gray-600">
@@ -78,9 +91,9 @@ const Login = () => {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full bg-blue-900 text-white font-semibold py-2 rounded-md hover:bg-blue-800 transition"
+                className="w-full bg-green-900 text-white font-semibold py-2 rounded-md hover:bg-green-800 transition"
               >
-                Sign In
+                Get Started
               </button>
 
               {/* Social login */}
@@ -98,7 +111,7 @@ const Login = () => {
 
               <p className="text-sm text-center mt-4">
                 Don't have an account?{" "}
-                <span className="text-blue-900 hover:text-blue-800 font-medium cursor-pointer">
+                <span className="text-green-900 hover:text-green-800 font-medium cursor-pointer">
                   Contact Admin
                 </span>
               </p>
@@ -110,7 +123,7 @@ const Login = () => {
         <div
           className="hidden md:block md:w-1/2"
           style={{
-            backgroundImage: `url("/img01.jpg")`, // Update this path to your actual image location in public folder
+            backgroundImage: `url("/img01.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

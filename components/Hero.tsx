@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -17,11 +18,13 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col w-full gap-3 sm:flex-row my-7">
-          <Button
-            type="button"
-            title="Get Started"
-            variant="border-[#30AF5B] bg-[#30AF5B] px-8 py-5 text-white"
-          />
+          <Link href="/login">
+            <Button
+              type="button"
+              title="Get Started"
+              variant="border-[#30AF5B] bg-[#30AF5B] px-8 py-5 text-white"
+            />
+          </Link>
           <Button
             type="button"
             title="How we work?"

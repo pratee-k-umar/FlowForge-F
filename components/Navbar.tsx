@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0 relative z-30 py-5">
       <Link href="/">
-        <h2 className="text-[24px] font-400 font-bold text-gray-[#585858]">
+        <h2 className="text-[24px] font-400 font-bold text-[#585858]">
           FlowForge.
         </h2>
       </Link>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link
             href={link.href}
             key={link.key}
-            className="text-[16px] font-400 text-gray-[#585858] flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
+            className="text-[16px] font-400 text-[#585858] flex items-center justify-center cursor-pointer pb-1.5 transition-all hover:font-bold"
           >
             {link.label}
           </Link>
@@ -25,12 +25,14 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden lg:flex items-center justify-center">
-        <Button
-          type="button"
-          title="Login"
-          icon="/user.svg"
-          variant="bg-[#292C27] px-8 py-4 text-white transition-all hover:bg-black"
-        />
+        <Link href="/login">
+          <Button
+            type="button"
+            title="Login"
+            icon="/user.svg"
+            variant="bg-[#292C27] px-8 py-4 text-white transition-all hover:bg-black"
+          />
+        </Link>
       </div>
 
       <Image
