@@ -1,25 +1,37 @@
-import Announcements from "@/components/Announcements";
-import BigCalendar from "@/components/BigCalender";
-// import EventCalender from "@/components/EventCalender";
+import AttendanceChart from "@/components/AttendanceChart";
+import Bandwidth2 from "@/components/Bandwidth2";
+import FinanceChart from "@/components/FinanceChart";
+import UserCard from "@/components/UserCard";
+// import Announcements from "@/components/Announcements";
+import React from "react";
 
-const facultyPage = () => {
+const UserPage = () => {
   return (
-    <div className="p-4 flex gap-4 flex-col xl:flex-row">
-      {/* LEFT */}
-      <div className="w-full xl:w-2/3">
-        <div className="h-full bg-white p-4 rounded-md">
-          <h1 className="text-xl font-semibold">
-            Schedule (Ishita Srivastava)
-          </h1>
-          <BigCalendar />
+    <div className="p-4 flex gap-4 flex-col md:flex-row">
+      {/* left */}
+      <div className="w-full lg:w-2/3 flex flex-col gap-8">
+        {/* user cards */}
+        <div className="flex gap-4 justify-between flex-wrap">
+          <UserCard type="Databases" />
+          <UserCard type="Storage" />
+          <UserCard type="Authentication" />
+          <UserCard type="Functions" />
         </div>
+        {/* middle  */}
+        <div className="flex gap-4 flex-col lg:flex-row">
+          <div className="w-full h-[500px]">
+            <FinanceChart />
+          </div>
+        </div>
+        {/* bottom  */}
       </div>
-      {/* RIGHT */}
-      <div className="w-full xl:w-1/3 flex flex-col gap-8">
-        <Announcements />
+      {/* right */}
+      <div className="w-full lg:w-1/3 flex flex-col gap-8">
+        <AttendanceChart />
+        <Bandwidth2 />
       </div>
     </div>
   );
 };
 
-export default facultyPage;
+export default UserPage;
