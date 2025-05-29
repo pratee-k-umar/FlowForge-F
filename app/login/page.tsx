@@ -25,7 +25,7 @@ const Login = () => {
 
     // Basic login check
     if (formData.email === "admin@gmail.com" && formData.password === "1234") {
-      router.push("http://localhost:3000/dashboard/user");
+      router.push("http://localhost:3000/projected");
     } else {
       alert("Invalid credentials. Try again.");
     }
