@@ -62,6 +62,9 @@ const Footer = () => {
         <p className="regular-14 w-full text-center text-gray-30">
           All rights reserved
         </p>
+        <p className="regular-14 w-full text-center text-gray-30">
+          Made with ❤️ by FlowForge Team
+        </p>
       </div>
     </footer>
   );
