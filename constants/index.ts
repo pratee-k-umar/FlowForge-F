@@ -1,9 +1,9 @@
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
-  { href: "/", key: "how_hilink_work", label: "How Hilink Work?" },
+  { href: "/", key: "how_hilink_work", label: "How FlowForge Works?" },
   { href: "/", key: "services", label: "Services" },
-  { href: "/", key: "pricing ", label: "Pricing " },
+  // { href: "/", key: "pricing ", label: "Pricing " },
   { href: "/", key: "contact_us", label: "Contact Us" },
 ];
 
@@ -62,7 +62,7 @@ export const FOOTER_LINKS = [
   },
   {
     title: "Our Community",
-    links: ["Climbing xixixi", "Hiking hilink", "Hilink kinthill"],
+    links: ["Databases", "Services", "Functions"],
   },
 ];
 
@@ -76,11 +76,5 @@ export const FOOTER_CONTACT_INFO = {
 
 export const SOCIALS = {
   title: "Social",
-  links: [
-    "/facebook.svg",
-    "/instagram.svg",
-    "/twitter.svg",
-    "/youtube.svg",
-    "/wordpress.svg",
-  ],
+  links: ["/facebook.svg", "/instagram.svg", "/twitter.svg"],
 };
