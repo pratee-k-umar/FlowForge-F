@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Next.js Frontend**
 
-## Getting Started
+> **A user-friendly dashboard** to manage projects, configure databases, and access dynamic APIs.
 
-First, run the development server:
+## ✨ Key Features
+
+* 🗂️ **Project Management** – Create and list backend projects.
+* 🔗 **Database Connection** – Connect cloud databases (MongoDB, Postgres, MySQL) via a simple URI.
+* 🚀 **Dynamic APIs** – View and test live GraphQL and REST endpoints.
+* 🛠️ **GraphiQL Playground** – Integrated GraphQL query testing.
+* 📡 **REST API Console** – Access REST CRUD routes per project.
+
+## 📁 Folder Structure
+
+```
+pages/
+├── projects/
+│   ├── index.tsx          # List projects
+│   ├── new.tsx            # Create project form
+│   └── [id].tsx           # Project detail & API access
+lib/
+└── apollo.ts              # Apollo Client setup
+└── graphql/queries.ts     # GraphQL queries & mutations
+components/
+└── GraphiQL.tsx           # Optional: embedded GraphiQL
+```
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone & Install
+
+```bash
+git clone https://github.com/your-repo/frontend.git
+cd frontend
+npm install
+```
+
+### 2️⃣ Configure `.env.local`
+
+```dotenv
+NEXT_PUBLIC_API_GRAPHQL=http://localhost:4000/api/graphql
+NEXT_PUBLIC_API_REST=http://localhost:4000/api
+```
+
+### 3️⃣ Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000/projects` to start using the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Main Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### `/projects`
 
-## Learn More
+* Lists all projects with basic details.
+* Link to create a new project.
 
-To learn more about Next.js, take a look at the following resources:
+### `/projects/new`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Simple form to create a new project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `/projects/[id]`
 
-## Deploy on Vercel
+* Project detail view with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  * Live GraphQL endpoint (clickable)
+  * Database connection form
+  * Embedded GraphiQL playground
+  * REST endpoint summary and usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Backend Integration
+
+* GraphQL API requests via **Apollo Client**.
+* REST calls via **React Query** or native `fetch`.
+* Backend URL configured via `NEXT_PUBLIC_API_GRAPHQL` and `NEXT_PUBLIC_API_REST` in `.env.local`.
+
+## 🛠️ Tech Stack
+
+* **Next.js** – React framework with server-side rendering
+* **Apollo Client** – GraphQL client
+* **React Query** – REST data fetching & caching
+* **TypeScript** – For type safety and scalability
+* **Optional**: Tailwind CSS, Material UI, or your preferred styling framework.
+
+## 📚 Extending the Project
+
+* 🔒 Add user authentication (NextAuth.js, Firebase Auth)
+* 🎨 Build a visual schema designer for defining APIs
+* 📈 Include real-time metrics and logs per project
+* 🔄 Add WebSocket or GraphQL subscriptions for live updates
+
+## 📢 Developer Tips
+
+* Make sure the API URLs in `.env.local` match your backend deployment.
+* Test GraphQL endpoints with an embedded **GraphiQL** or an external tool.
+* Use Postman or your browser to check REST endpoints.
