@@ -3,18 +3,14 @@
 import Footer from "@/components/Footer";
 // import GetApp from "@/components/GetApp";
 // import Guide from "@/components/Guide";
-import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import PrivacySecuritySection from "@/components/PrivacySec";
-import SdkSection from "@/components/sdksection";
+import { Home } from "@/components/Home";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <PrivacySecuritySection />
-      <SdkSection />
+      <Home />
       <Footer />
     </>
   );
