@@ -13,23 +13,14 @@ interface FooterSection {
 const Footer: React.FC = () => {
   const footerSections: FooterSection[] = [
     {
-      title: "Products",
-      links: [
-        { label: "Web Apps", href: "/products/web" },
-        { label: "Mobile Apps", href: "/products/mobile" },
-        { label: "API Services", href: "/products/api" },
-        { label: "Analytics", href: "/products/analytics" },
-        { label: "Cloud Storage", href: "/products/storage" },
-      ],
-    },
-    {
       title: "Features",
       links: [
-        { label: "Real-time Sync", href: "/features/sync" },
-        { label: "Security", href: "/features/security" },
-        { label: "Integration", href: "/features/integration" },
-        { label: "Automation", href: "/features/automation" },
-        { label: "Collaboration", href: "/features/collaboration" },
+        { label: "Analytics", href: "/features/analytics" },
+        { label: "Auth", href: "/features/auth" },
+        { label: "Database", href: "/products/api" },
+        { label: "Functions", href: "/products/analytics" },
+        { label: "Realtime", href: "/products/storage" },
+        { label: "Testing", href: "/products/storage" },
       ],
     },
     {
