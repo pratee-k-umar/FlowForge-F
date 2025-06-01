@@ -73,7 +73,7 @@ const Assurance = () => {
                 See your products grow
               </h1>
               <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Keep track of your projects progress on the Appwrite Console and
+                Keep track of your projects progress on the FlowForge Dashboard and
                 see them grow into products users love and use every day.
               </p>
             </div>
