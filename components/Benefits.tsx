@@ -157,13 +157,15 @@ const BenefitsSection: React.FC = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
     },
   ];
-
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen bg-black text-white py-20 px-6"
+      className="relative min-h-screen bg-black text-white py-20 px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Bottom Left Gradient matching the reference */}
+      <div className="absolute bottom-0 left-0 w-full h-96 pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Main Title */}
         <div className="text-center mb-20">
           <h1

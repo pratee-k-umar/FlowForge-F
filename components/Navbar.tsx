@@ -2,13 +2,6 @@
 
 import { useState, useRef } from "react";
 import {
-  Globe,
-  BarChart3,
-  Cloud,
-  Shield,
-  Search,
-  Expand,
-  ShoppingCart,
   ChartNoAxesCombined,
   ChevronsLeftRightEllipsis,
   Database,
@@ -42,6 +35,7 @@ const Navbar = () => {
       description:
         "Gain insights into your project's performace and API usage effortlessly.",
       icon: <ChartNoAxesCombined className="w-8 h-8 text-white" />,
+      url: "/features/auth"
     },
     {
       id: 2,

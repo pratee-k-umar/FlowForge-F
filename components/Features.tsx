@@ -74,13 +74,11 @@ const Features: React.FC = () => {
       } relative animate-fadeInUp`}
       style={{ animationDelay: `${index * 0.2}s` }}
     >
-      {/* Feature Box */}
       <div
         className={`w-80 p-8 bg-gray-900/60 backdrop-blur-sm rounded-2xl transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-gray-900/30 hover:bg-gray-900/40 group relative overflow-hidden ${
           isLeft ? "mr-12" : "ml-12"
         }`}
       >
-        {/* Inner Fade Effect - Strong fade to invisible */}
         <div
           className={`absolute inset-0 pointer-events-none ${
             isLeft
@@ -118,8 +116,6 @@ const Features: React.FC = () => {
           </button>
         </div>
       </div>
-
-      {/* Connecting Line */}
       <div
         className={`flex-1 flex items-center justify-center relative ${
           isLeft ? "" : ""
@@ -128,7 +124,6 @@ const Features: React.FC = () => {
         <div
           className={`flex items-center ${isLeft ? "" : "flex-row-reverse"}`}
         >
-          {/* Animated Line */}
           <div
             className={`h-0.5 bg-gray-600/60 relative overflow-hidden ${
               isLeft ? "w-20" : "w-20"
@@ -136,8 +131,6 @@ const Features: React.FC = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent animate-shimmer"></div>
           </div>
-
-          {/* Pulsing Dot */}
           <div
             className={`w-4 h-4 rounded-full bg-white/80 ${
               isLeft ? "ml-3" : "mr-3"
@@ -145,8 +138,6 @@ const Features: React.FC = () => {
           >
             <div className="w-full h-full rounded-full bg-white/60 animate-ping opacity-75"></div>
           </div>
-
-          {/* Extended Line */}
           <div
             className={`h-0.5 bg-gray-600/60 relative overflow-hidden ${
               isLeft ? "w-12 ml-3" : "w-12 mr-3"
@@ -159,8 +150,6 @@ const Features: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Explanation Text (Not in Box) */}
       <div className={`w-96 ${isLeft ? "ml-8" : "mr-8"}`}>
         <div className="flex items-center mb-4">
           <div className="w-2 h-2 rounded-full bg-white/70 animate-pulse mr-3"></div>
@@ -172,8 +161,6 @@ const Features: React.FC = () => {
           {feature.explanation}
         </p>
       </div>
-
-      {/* Floating Number Badge */}
       <div
         className={`absolute ${
           isLeft ? "left-35" : "right-35"
@@ -184,10 +171,8 @@ const Features: React.FC = () => {
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Animated Background Pattern */}
       <div className="fixed inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -205,12 +190,7 @@ const Features: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Header */}
       <div className="text-center py-20 px-4 relative">
-        <h1 className="text-6xl font-bold mb-6 text-white animate-fadeInDown">
-          Get Better Result with Stunning
-        </h1>
         <h2
           className="text-6xl font-bold text-gray-300 animate-fadeInUp"
           style={{ animationDelay: "0.3s" }}
@@ -219,15 +199,11 @@ const Features: React.FC = () => {
         </h2>
         <div className="mt-8 w-24 h-1 bg-gray-600 mx-auto animate-expandWidth"></div>
       </div>
-
-      {/* Features Section */}
       <div className="max-w-8xl mx-auto px-6 pb-20">
         <div className="relative">
-          {/* Vertical Connecting Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-700 opacity-50">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent animate-slideDown opacity-30"></div>
           </div>
-
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.id}
@@ -238,8 +214,6 @@ const Features: React.FC = () => {
           ))}
         </div>
       </div>
-
-      {/* Custom Styles */}
       <style jsx>{`
         @keyframes fadeInUp {
           from {
