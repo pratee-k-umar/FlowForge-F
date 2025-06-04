@@ -1,5 +1,14 @@
-import React from "react";
-import { ChartNoAxesCombined, KeyRound, Database, Parentheses, ChevronsLeftRightEllipsis, ShieldEllipsis } from "lucide-react";
+"use client";
+
+import React, { useEffect, useState } from "react";
+import {
+  ChartNoAxesCombined,
+  KeyRound,
+  Database,
+  Parentheses,
+  ChevronsLeftRightEllipsis,
+  ShieldEllipsis,
+} from "lucide-react";
 
 interface Feature {
   id: number;
@@ -23,8 +32,7 @@ const Features: React.FC = () => {
     {
       id: 2,
       title: "Auth",
-      description:
-        "Secure user access with JWT and role-based permissions",
+      description: "Secure user access with JWT and role-based permissions",
       explanation:
         "Building projects with unique user bases demands a secure, streamlined approach to authentication. With dedicated login systems for each project, your platform keeps access controlled and data protected.",
       icon: <KeyRound className="w-8 h-8 text-white" />,
@@ -201,7 +209,7 @@ const Features: React.FC = () => {
       </div>
       <div className="max-w-8xl mx-auto px-6 pb-20">
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-700 opacity-50">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-700 opacity-50 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent animate-slideDown opacity-30"></div>
           </div>
           {features.map((feature, index) => (
@@ -214,95 +222,96 @@ const Features: React.FC = () => {
           ))}
         </div>
       </div>
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
+      <style jsx>
+        {`
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes fadeInDown {
+            from {
+              opacity: 0;
+              transform: translateY(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes shimmer {
+            0% {
+              transform: translateX(-100%);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+          }
+
+          @keyframes slideDown {
+            0% {
+              transform: translateY(-100%);
+            }
+            100% {
+              transform: translateY(100%);
+            }
+          }
+
+          @keyframes twinkle {
+            0%,
+            100% {
+              opacity: 0.3;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 1;
+              transform: scale(1.2);
+            }
+          }
+
+          @keyframes expandWidth {
+            from {
+              width: 0;
+            }
+            to {
+              width: 6rem;
+            }
+          }
+
+          .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
-            transform: translateY(30px);
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
 
-        @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-30px);
+          .animate-fadeInDown {
+            animation: fadeInDown 0.8s ease-out forwards;
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
 
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
+          .animate-shimmer {
+            animation: shimmer 2s infinite;
           }
-          100% {
-            transform: translateX(100%);
-          }
-        }
 
-        @keyframes slideDown {
-          0% {
-            transform: translateY(-100%);
+          .animate-slideDown {
+            animation: slideDown 3s infinite linear;
           }
-          100% {
-            transform: translateY(100%);
-          }
-        }
 
-        @keyframes twinkle {
-          0%,
-          100% {
-            opacity: 0.3;
-            transform: scale(1);
+          .animate-twinkle {
+            animation: twinkle 2s infinite ease-in-out;
           }
-          50% {
-            opacity: 1;
-            transform: scale(1.2);
-          }
-        }
 
-        @keyframes expandWidth {
-          from {
+          .animate-expandWidth {
+            animation: expandWidth 1s ease-out forwards;
+            animation-delay: 0.6s;
             width: 0;
           }
-          to {
-            width: 6rem;
-          }
-        }
-
-        .animate-fadeInUp {
-          animation: fadeInUp 0.8s ease-out forwards;
-          opacity: 0;
-        }
-
-        .animate-fadeInDown {
-          animation: fadeInDown 0.8s ease-out forwards;
-        }
-
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-
-        .animate-slideDown {
-          animation: slideDown 3s infinite linear;
-        }
-
-        .animate-twinkle {
-          animation: twinkle 2s infinite ease-in-out;
-        }
-
-        .animate-expandWidth {
-          animation: expandWidth 1s ease-out forwards;
-          animation-delay: 0.6s;
-          width: 0;
-        }
-      `}
+        `}
       </style>
     </div>
   );

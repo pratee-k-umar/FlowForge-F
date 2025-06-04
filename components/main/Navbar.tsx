@@ -9,6 +9,7 @@ import {
   Parentheses,
   ShieldEllipsis,
 } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showFeatures, setShowFeatures] = useState(false);
@@ -80,12 +81,12 @@ const Navbar = () => {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
               Home
-            </a>
+            </Link>
             <div
               className="relative group"
               onMouseEnter={handleMouseEnter}
@@ -109,8 +110,6 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-
-              {/* Features Dropdown */}
               {showFeatures && (
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-2 mt-5 w-screen max-w-6xl">
                   <div className="bg-black backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
@@ -140,18 +139,18 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <a
+            {/* <Link
               href="#"
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
               Pricing
-            </a>
-            <a
-              href="#"
+            </Link> */}
+            <Link
+              href="/about"
               className="text-gray-300 hover:text-white transition-colors duration-300 font-medium"
             >
               About
-            </a>
+            </Link>
           </div>
           <div className="flex items-center space-x-4">
             <button className="bg-white text-black px-6 py-2.5 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105">

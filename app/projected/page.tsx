@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Footer from "@/components/Footer";
+import Footer from "@/components/main/Footer";
 import React from "react";
 
 const tabs = ["Projects", "Domains", "Members", "Usage", "Billing", "Settings"];
