@@ -36,7 +36,7 @@ const Navbar = () => {
       description:
         "Gain insights into your project's performace and API usage effortlessly.",
       icon: <ChartNoAxesCombined className="w-8 h-8 text-white" />,
-      url: "/features/auth"
+      url: "/features/auth",
     },
     {
       id: 2,
@@ -76,7 +76,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-white">FlowForge</h1>
+            <Link href="/">
+              <h1 className="text-2xl font-bold text-white cursor-pointer">
+                FlowForge
+              </h1>
+            </Link>
           </div>
 
           {/* Navigation Links - Desktop */}

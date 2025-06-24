@@ -5,6 +5,7 @@ import Benefits from "./home/Benefits";
 import Features from "./home/Features";
 import Hero from "./home/Hero";
 import ImageContainer from "./home/ImageContainer";
+import Pricing from "./home/Pricing";
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
       <Features />
       <Assurance />
       <Benefits />
+      <Pricing />
     </div>
   );
 };
