@@ -15,7 +15,7 @@ export const Home = () => {
       <Features />
       <Assurance />
       <Benefits />
-      <Pricing />
+      {/* <Pricing /> */}
     </div>
   );
 };
